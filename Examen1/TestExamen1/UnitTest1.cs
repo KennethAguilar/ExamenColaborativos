@@ -140,6 +140,7 @@ namespace TestExamen1
 
         }
 
+        //Es diagonal
         [TestMethod]
         public void testEsDiagonal() {
 
