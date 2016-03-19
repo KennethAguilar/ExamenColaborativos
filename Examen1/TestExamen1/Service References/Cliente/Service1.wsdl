@@ -79,6 +79,12 @@
   <wsdl:message name="IService1_esDiagonal_OutputMessage">
     <wsdl:part name="parameters" element="tns:esDiagonalResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_esTriangularInferior_InputMessage">
+    <wsdl:part name="parameters" element="tns:esTriangularInferior" />
+  </wsdl:message>
+  <wsdl:message name="IService1_esTriangularInferior_OutputMessage">
+    <wsdl:part name="parameters" element="tns:esTriangularInferiorResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -127,6 +133,10 @@
     <wsdl:operation name="esDiagonal">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/esDiagonal" message="tns:IService1_esDiagonal_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/esDiagonalResponse" message="tns:IService1_esDiagonal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="esTriangularInferior">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/esTriangularInferior" message="tns:IService1_esTriangularInferior_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/esTriangularInferiorResponse" message="tns:IService1_esTriangularInferior_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -232,6 +242,15 @@
     </wsdl:operation>
     <wsdl:operation name="esDiagonal">
       <soap:operation soapAction="http://tempuri.org/IService1/esDiagonal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esTriangularInferior">
+      <soap:operation soapAction="http://tempuri.org/IService1/esTriangularInferior" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

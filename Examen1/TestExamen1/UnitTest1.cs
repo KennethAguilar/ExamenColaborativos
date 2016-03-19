@@ -169,6 +169,20 @@ namespace TestExamen1
 
         }
 
+        [TestMethod]
+        public void testEsTriangularInferior() {
+
+            resultadoEsperado = "No es triangular inferior";
+
+            cliente = new Service1Client();
+
+            resultadoReal = Convert.ToString(cliente.esTriangularInferior());
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal,
+                string.Format(mensajeAlerta, resultadoEsperado.ToString(), resultadoReal.ToString()));
+
+        }
+
     }
 }
 
