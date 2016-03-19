@@ -137,6 +137,12 @@ namespace TestExamen1.Cliente {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Multi", ReplyAction="http://tempuri.org/IService1/MultiResponse")]
         System.Threading.Tasks.Task<string> MultiAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esDiagonal", ReplyAction="http://tempuri.org/IService1/esDiagonalResponse")]
+        string esDiagonal();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esDiagonal", ReplyAction="http://tempuri.org/IService1/esDiagonalResponse")]
+        System.Threading.Tasks.Task<string> esDiagonalAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -244,6 +250,14 @@ namespace TestExamen1.Cliente {
         
         public System.Threading.Tasks.Task<string> MultiAsync() {
             return base.Channel.MultiAsync();
+        }
+        
+        public string esDiagonal() {
+            return base.Channel.esDiagonal();
+        }
+        
+        public System.Threading.Tasks.Task<string> esDiagonalAsync() {
+            return base.Channel.esDiagonalAsync();
         }
     }
 }

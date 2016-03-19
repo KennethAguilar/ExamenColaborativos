@@ -140,6 +140,19 @@ namespace TestExamen1
 
         }
 
+        [TestMethod]
+        public void testEsDiagonal() {
+
+            resultadoEsperado = "No es diagonal";
+            cliente = new Service1Client();
+
+            resultadoReal = Convert.ToString(cliente.esDiagonal());
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal,
+                string.Format(mensajeAlerta, resultadoEsperado.ToString(), resultadoReal.ToString()));
+
+        }
+
     }
 }
 

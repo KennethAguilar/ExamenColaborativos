@@ -43,6 +43,9 @@ namespace Examen1
 
         [OperationContract]
         string Multi();
+
+        [OperationContract]
+        string esDiagonal();
     }
 
 

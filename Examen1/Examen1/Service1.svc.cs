@@ -99,6 +99,35 @@ namespace Examen1
             return resultado;
         }
 
+        public string esDiagonal()
+        {
+
+            string resultado = "";
+
+            int[][] matriz = new int[][] {
+                new int[] { 2, 3, 4},
+                new int[] { 5, 6, 7},
+                new int[] { 8, 3, 1}
+            };
+
+            for (int i = 0; i < 3; i++)
+                for (int j = 0; j < 3; j++)
+                {
+
+                    if (i != j)
+                    {
+
+                        if (matriz[i][j] != 0)
+                            resultado = "No es diagonal";
+                        else
+                            resultado = "Es diagonal";
+                    }
+                }
+
+            return resultado;
+
+        }
+
         public string transpuesta()
         {
 
