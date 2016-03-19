@@ -37,6 +37,24 @@
   <wsdl:message name="IService1_obtenerDiagonal_OutputMessage">
     <wsdl:part name="parameters" element="tns:obtenerDiagonalResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_esNulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:esNulo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_esNulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:esNuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_esFila_InputMessage">
+    <wsdl:part name="parameters" element="tns:esFila" />
+  </wsdl:message>
+  <wsdl:message name="IService1_esFila_OutputMessage">
+    <wsdl:part name="parameters" element="tns:esFilaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_esColumna_InputMessage">
+    <wsdl:part name="parameters" element="tns:esColumna" />
+  </wsdl:message>
+  <wsdl:message name="IService1_esColumna_OutputMessage">
+    <wsdl:part name="parameters" element="tns:esColumnaResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -57,6 +75,18 @@
     <wsdl:operation name="obtenerDiagonal">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerDiagonal" message="tns:IService1_obtenerDiagonal_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerDiagonalResponse" message="tns:IService1_obtenerDiagonal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="esNulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/esNulo" message="tns:IService1_esNulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/esNuloResponse" message="tns:IService1_esNulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="esFila">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/esFila" message="tns:IService1_esFila_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/esFilaResponse" message="tns:IService1_esFila_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="esColumna">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/esColumna" message="tns:IService1_esColumna_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/esColumnaResponse" message="tns:IService1_esColumna_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -99,6 +129,33 @@
     </wsdl:operation>
     <wsdl:operation name="obtenerDiagonal">
       <soap:operation soapAction="http://tempuri.org/IService1/obtenerDiagonal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esNulo">
+      <soap:operation soapAction="http://tempuri.org/IService1/esNulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esFila">
+      <soap:operation soapAction="http://tempuri.org/IService1/esFila" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esColumna">
+      <soap:operation soapAction="http://tempuri.org/IService1/esColumna" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

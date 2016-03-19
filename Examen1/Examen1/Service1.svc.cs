@@ -37,6 +37,51 @@ namespace Examen1
             return resultado;
         }
 
+        public string esNulo()
+        {
+
+            int[][] matriz = new int[][] {
+                new int[] { 2, 3, 4},
+                new int[] { 5, 6, 7},
+                new int[] { 8, 3, 1}
+            };
+
+            if(matriz.Length == 0 )
+                return "La matriz si es nula";
+            else
+                return "La matriz no es nula";
+        }
+
+        public string esColumna()
+        {
+
+            int[][] matriz = new int[][] {
+                new int[] { 2, 3, 4},
+                new int[] { 5, 6, 7},
+                new int[] { 8, 3, 1}
+            };
+
+            if (matriz.Length == 1)
+                return "La matriz es 1xn";
+            else
+                return "La matriz no es 1xn";
+        }
+
+        public string esFila()
+        {
+
+            int[][] matriz = new int[][] {
+                new int[] { 2, 3, 4},
+                new int[] { 5, 6, 7},
+                new int[] { 8, 3, 1}
+            };
+
+            if (matriz[0].Length == 1)
+                return "La matriz es nx1";
+            else
+                return "La matriz no es nx1";
+        }
+
         public string obtenerDiagonal()
         {
 

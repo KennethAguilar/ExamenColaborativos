@@ -107,6 +107,24 @@ namespace TestExamen1.Cliente {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerDiagonal", ReplyAction="http://tempuri.org/IService1/obtenerDiagonalResponse")]
         System.Threading.Tasks.Task<string> obtenerDiagonalAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esNulo", ReplyAction="http://tempuri.org/IService1/esNuloResponse")]
+        string esNulo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esNulo", ReplyAction="http://tempuri.org/IService1/esNuloResponse")]
+        System.Threading.Tasks.Task<string> esNuloAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esFila", ReplyAction="http://tempuri.org/IService1/esFilaResponse")]
+        string esFila();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esFila", ReplyAction="http://tempuri.org/IService1/esFilaResponse")]
+        System.Threading.Tasks.Task<string> esFilaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esColumna", ReplyAction="http://tempuri.org/IService1/esColumnaResponse")]
+        string esColumna();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esColumna", ReplyAction="http://tempuri.org/IService1/esColumnaResponse")]
+        System.Threading.Tasks.Task<string> esColumnaAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -174,6 +192,30 @@ namespace TestExamen1.Cliente {
         
         public System.Threading.Tasks.Task<string> obtenerDiagonalAsync() {
             return base.Channel.obtenerDiagonalAsync();
+        }
+        
+        public string esNulo() {
+            return base.Channel.esNulo();
+        }
+        
+        public System.Threading.Tasks.Task<string> esNuloAsync() {
+            return base.Channel.esNuloAsync();
+        }
+        
+        public string esFila() {
+            return base.Channel.esFila();
+        }
+        
+        public System.Threading.Tasks.Task<string> esFilaAsync() {
+            return base.Channel.esFilaAsync();
+        }
+        
+        public string esColumna() {
+            return base.Channel.esColumna();
+        }
+        
+        public System.Threading.Tasks.Task<string> esColumnaAsync() {
+            return base.Channel.esColumnaAsync();
         }
     }
 }

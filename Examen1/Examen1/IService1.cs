@@ -28,6 +28,15 @@ namespace Examen1
 
         [OperationContract]
         string obtenerDiagonal();
+
+        [OperationContract]
+        string esNulo();
+
+        [OperationContract]
+        string esFila();
+
+        [OperationContract]
+        string esColumna();
     }
 
 

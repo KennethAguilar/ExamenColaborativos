@@ -64,6 +64,49 @@ namespace TestExamen1
                 string.Format(mensajeAlerta, resultadoEsperado.ToString(), resultadoReal.ToString()));
 
         }
+
+        [TestMethod]
+        public void testEsNulo()
+        {
+
+            resultadoEsperado = "La matriz no es nula";
+            cliente = new Service1Client();
+
+            resultadoReal = Convert.ToString(cliente.esNulo());
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal,
+                string.Format(mensajeAlerta, resultadoEsperado.ToString(), resultadoReal.ToString()));
+
+        }
+
+        [TestMethod]
+        public void testEsFila()
+        {
+
+            resultadoEsperado = "La matriz no es nx1";
+            cliente = new Service1Client();
+
+            resultadoReal = Convert.ToString(cliente.esFila());
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal,
+                string.Format(mensajeAlerta, resultadoEsperado.ToString(), resultadoReal.ToString()));
+
+        }
+
+        [TestMethod]
+        public void testEsColumna()
+        {
+
+            resultadoEsperado = "La matriz no es 1xn";
+            cliente = new Service1Client();
+
+            resultadoReal = Convert.ToString(cliente.esColumna());
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal,
+                string.Format(mensajeAlerta, resultadoEsperado.ToString(), resultadoReal.ToString()));
+
+        }
+
     }
 }
 
