@@ -183,6 +183,20 @@ namespace TestExamen1
 
         }
 
+        [TestMethod]
+        public void testEsTriangularSuperior() {
+
+            resultadoEsperado = "No es triangular superior";
+
+            cliente = new Service1Client();
+
+            resultadoReal = Convert.ToString(cliente.esTriangularSuperior());
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal,
+                string.Format(mensajeAlerta, resultadoEsperado.ToString(), resultadoReal.ToString()));
+
+        }
+
     }
 }
 

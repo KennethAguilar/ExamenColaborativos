@@ -110,7 +110,7 @@ namespace Examen1
             };
 
             for (int i = 0; i < 3; i++)
-                for (int j = i+1; j < 3; j++) {
+                for (int j = i-1; j >= 0; j--) {
                     if (j == 0)
                         resultado = "Es triangular inferior";
                     else
@@ -119,6 +119,27 @@ namespace Examen1
 
             return resultado;
 
+        }
+
+        public string esTriangularSuperior() {
+            string resultado = "";
+
+            int[][] matriz = new int[][] {
+                new int[] { 2, 3, 4},
+                new int[] { 5, 6, 7},
+                new int[] { 8, 3, 1}
+            };
+
+            for (int i = 0; i < 3; i++)
+                for (int j = i + 1; j < 3; j++)
+                {
+                    if (j == 0)
+                        resultado = "Es triangular superior";
+                    else
+                        resultado = "No es triangular superior";
+                }
+
+            return resultado;
         }
 
         public string transpuesta()

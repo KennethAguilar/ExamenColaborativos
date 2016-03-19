@@ -52,6 +52,9 @@ namespace Examen1
 
         [OperationContract]
         string esTriangularInferior();
+
+        [OperationContract]
+        string esTriangularSuperior();
     }
 
 

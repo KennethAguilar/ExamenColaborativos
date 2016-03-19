@@ -155,6 +155,12 @@ namespace TestExamen1.Cliente {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esTriangularInferior", ReplyAction="http://tempuri.org/IService1/esTriangularInferiorResponse")]
         System.Threading.Tasks.Task<string> esTriangularInferiorAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esTriangularSuperior", ReplyAction="http://tempuri.org/IService1/esTriangularSuperiorResponse")]
+        string esTriangularSuperior();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esTriangularSuperior", ReplyAction="http://tempuri.org/IService1/esTriangularSuperiorResponse")]
+        System.Threading.Tasks.Task<string> esTriangularSuperiorAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -286,6 +292,14 @@ namespace TestExamen1.Cliente {
         
         public System.Threading.Tasks.Task<string> esTriangularInferiorAsync() {
             return base.Channel.esTriangularInferiorAsync();
+        }
+        
+        public string esTriangularSuperior() {
+            return base.Channel.esTriangularSuperior();
+        }
+        
+        public System.Threading.Tasks.Task<string> esTriangularSuperiorAsync() {
+            return base.Channel.esTriangularSuperiorAsync();
         }
     }
 }
