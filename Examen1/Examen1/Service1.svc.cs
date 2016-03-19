@@ -117,6 +117,30 @@ namespace Examen1
             return resultado;
         }
 
+        public string Multi()
+        {
+
+            string resultado = "";
+
+            int[][] matriz = new int[][] {
+                new int[] { 2, 3, 4},
+                new int[] { 5, 6, 7},
+                new int[] { 8, 3, 1}
+            };
+
+            int[][] matriz2 = new int[][] {
+                new int[] { 2, 3, 4},
+                new int[] { 5, 6, 7},
+                new int[] { 8, 3, 1}
+            };
+
+            for (int i = 0; i < 3; i++)
+                for (int j = 0; j < 3; j++)
+                    resultado += Convert.ToString(matriz[i][j] * matriz2[i][j]);
+
+            return resultado;
+        }
+
 
         public string GetData(int value)
         {

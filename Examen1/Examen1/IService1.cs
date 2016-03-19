@@ -40,6 +40,9 @@ namespace Examen1
 
         [OperationContract]
         string transpuesta();
+
+        [OperationContract]
+        string Multi();
     }
 
 
