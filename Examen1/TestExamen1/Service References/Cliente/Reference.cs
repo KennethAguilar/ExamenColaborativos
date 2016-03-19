@@ -138,6 +138,12 @@ namespace TestExamen1.Cliente {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Multi", ReplyAction="http://tempuri.org/IService1/MultiResponse")]
         System.Threading.Tasks.Task<string> MultiAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/simetrica", ReplyAction="http://tempuri.org/IService1/simetricaResponse")]
+        string simetrica();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/simetrica", ReplyAction="http://tempuri.org/IService1/simetricaResponse")]
+        System.Threading.Tasks.Task<string> simetricaAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esDiagonal", ReplyAction="http://tempuri.org/IService1/esDiagonalResponse")]
         string esDiagonal();
         
@@ -250,6 +256,14 @@ namespace TestExamen1.Cliente {
         
         public System.Threading.Tasks.Task<string> MultiAsync() {
             return base.Channel.MultiAsync();
+        }
+        
+        public string simetrica() {
+            return base.Channel.simetrica();
+        }
+        
+        public System.Threading.Tasks.Task<string> simetricaAsync() {
+            return base.Channel.simetricaAsync();
         }
         
         public string esDiagonal() {

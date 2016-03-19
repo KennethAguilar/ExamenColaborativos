@@ -140,6 +140,21 @@ namespace TestExamen1
 
         }
 
+        [TestMethod]
+        public void testSimetrica()
+        {
+
+
+            string result = "222222222";
+            cliente = new Service1Client();
+
+            resultadoReal = Convert.ToString(cliente.simetrica());
+
+            Assert.AreEqual(resultadoReal, result,
+                string.Format(mensajeAlerta, resultadoReal.ToString(), result.ToString()));
+
+        }
+
         //Es diagonal
         [TestMethod]
         public void testEsDiagonal() {

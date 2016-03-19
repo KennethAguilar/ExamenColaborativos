@@ -67,6 +67,12 @@
   <wsdl:message name="IService1_Multi_OutputMessage">
     <wsdl:part name="parameters" element="tns:MultiResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_simetrica_InputMessage">
+    <wsdl:part name="parameters" element="tns:simetrica" />
+  </wsdl:message>
+  <wsdl:message name="IService1_simetrica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:simetricaResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_esDiagonal_InputMessage">
     <wsdl:part name="parameters" element="tns:esDiagonal" />
   </wsdl:message>
@@ -113,6 +119,10 @@
     <wsdl:operation name="Multi">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Multi" message="tns:IService1_Multi_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/MultiResponse" message="tns:IService1_Multi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="simetrica">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/simetrica" message="tns:IService1_simetrica_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/simetricaResponse" message="tns:IService1_simetrica_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="esDiagonal">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/esDiagonal" message="tns:IService1_esDiagonal_InputMessage" />
@@ -204,6 +214,15 @@
     </wsdl:operation>
     <wsdl:operation name="Multi">
       <soap:operation soapAction="http://tempuri.org/IService1/Multi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="simetrica">
+      <soap:operation soapAction="http://tempuri.org/IService1/simetrica" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

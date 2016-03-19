@@ -45,6 +45,9 @@ namespace Examen1
         string Multi();
 
         [OperationContract]
+        string simetrica();
+
+        [OperationContract]
         string esDiagonal();
     }
 
