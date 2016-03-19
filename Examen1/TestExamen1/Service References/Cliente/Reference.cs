@@ -131,6 +131,12 @@ namespace TestExamen1.Cliente {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/transpuesta", ReplyAction="http://tempuri.org/IService1/transpuestaResponse")]
         System.Threading.Tasks.Task<string> transpuestaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Multi", ReplyAction="http://tempuri.org/IService1/MultiResponse")]
+        string Multi();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Multi", ReplyAction="http://tempuri.org/IService1/MultiResponse")]
+        System.Threading.Tasks.Task<string> MultiAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -230,6 +236,14 @@ namespace TestExamen1.Cliente {
         
         public System.Threading.Tasks.Task<string> transpuestaAsync() {
             return base.Channel.transpuestaAsync();
+        }
+        
+        public string Multi() {
+            return base.Channel.Multi();
+        }
+        
+        public System.Threading.Tasks.Task<string> MultiAsync() {
+            return base.Channel.MultiAsync();
         }
     }
 }

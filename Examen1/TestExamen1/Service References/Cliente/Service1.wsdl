@@ -61,6 +61,12 @@
   <wsdl:message name="IService1_transpuesta_OutputMessage">
     <wsdl:part name="parameters" element="tns:transpuestaResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_Multi_InputMessage">
+    <wsdl:part name="parameters" element="tns:Multi" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Multi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultiResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -97,6 +103,10 @@
     <wsdl:operation name="transpuesta">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/transpuesta" message="tns:IService1_transpuesta_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/transpuestaResponse" message="tns:IService1_transpuesta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Multi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Multi" message="tns:IService1_Multi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MultiResponse" message="tns:IService1_Multi_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -175,6 +185,15 @@
     </wsdl:operation>
     <wsdl:operation name="transpuesta">
       <soap:operation soapAction="http://tempuri.org/IService1/transpuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multi">
+      <soap:operation soapAction="http://tempuri.org/IService1/Multi" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

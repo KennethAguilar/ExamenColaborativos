@@ -125,6 +125,21 @@ namespace TestExamen1
 
         }
 
+        [TestMethod]
+        public void testMulti()
+        {
+            
+
+            string result = "49162536496491";
+            cliente = new Service1Client();
+
+            resultadoReal = Convert.ToString(cliente.Multi());
+
+            Assert.AreEqual(resultadoReal, result,
+                string.Format(mensajeAlerta, resultadoReal.ToString(), result.ToString()));
+
+        }
+
     }
 }
 
