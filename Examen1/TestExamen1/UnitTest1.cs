@@ -107,6 +107,24 @@ namespace TestExamen1
 
         }
 
+        [TestMethod]
+        public void testTranspuesta()
+        {
+            int[][] resultadoEsperado = new int[][] {
+                new int[] { 2, 3, 4},
+                new int[] { 5, 6, 7},
+                new int[] { 8, 3, 1}
+            };
+           
+            cliente = new Service1Client();
+
+            resultadoReal = Convert.ToString(cliente.transpuesta());
+
+            Assert.AreNotEqual(resultadoEsperado, resultadoReal,
+                string.Format(mensajeAlerta, resultadoEsperado.ToString(), resultadoReal.ToString()));
+
+        }
+
     }
 }
 

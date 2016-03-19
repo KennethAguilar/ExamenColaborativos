@@ -37,6 +37,9 @@ namespace Examen1
 
         [OperationContract]
         string esColumna();
+
+        [OperationContract]
+        string transpuesta();
     }
 
 
