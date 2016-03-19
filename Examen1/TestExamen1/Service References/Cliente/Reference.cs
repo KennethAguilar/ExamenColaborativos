@@ -161,6 +161,24 @@ namespace TestExamen1.Cliente {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/esTriangularSuperior", ReplyAction="http://tempuri.org/IService1/esTriangularSuperiorResponse")]
         System.Threading.Tasks.Task<string> esTriangularSuperiorAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/MultiplicarPorEscalar", ReplyAction="http://tempuri.org/IService1/MultiplicarPorEscalarResponse")]
+        string MultiplicarPorEscalar(int constante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/MultiplicarPorEscalar", ReplyAction="http://tempuri.org/IService1/MultiplicarPorEscalarResponse")]
+        System.Threading.Tasks.Task<string> MultiplicarPorEscalarAsync(int constante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EsEscalar", ReplyAction="http://tempuri.org/IService1/EsEscalarResponse")]
+        string EsEscalar();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EsEscalar", ReplyAction="http://tempuri.org/IService1/EsEscalarResponse")]
+        System.Threading.Tasks.Task<string> EsEscalarAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EsIdentidad", ReplyAction="http://tempuri.org/IService1/EsIdentidadResponse")]
+        string EsIdentidad();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EsIdentidad", ReplyAction="http://tempuri.org/IService1/EsIdentidadResponse")]
+        System.Threading.Tasks.Task<string> EsIdentidadAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -300,6 +318,30 @@ namespace TestExamen1.Cliente {
         
         public System.Threading.Tasks.Task<string> esTriangularSuperiorAsync() {
             return base.Channel.esTriangularSuperiorAsync();
+        }
+        
+        public string MultiplicarPorEscalar(int constante) {
+            return base.Channel.MultiplicarPorEscalar(constante);
+        }
+        
+        public System.Threading.Tasks.Task<string> MultiplicarPorEscalarAsync(int constante) {
+            return base.Channel.MultiplicarPorEscalarAsync(constante);
+        }
+        
+        public string EsEscalar() {
+            return base.Channel.EsEscalar();
+        }
+        
+        public System.Threading.Tasks.Task<string> EsEscalarAsync() {
+            return base.Channel.EsEscalarAsync();
+        }
+        
+        public string EsIdentidad() {
+            return base.Channel.EsIdentidad();
+        }
+        
+        public System.Threading.Tasks.Task<string> EsIdentidadAsync() {
+            return base.Channel.EsIdentidadAsync();
         }
     }
 }

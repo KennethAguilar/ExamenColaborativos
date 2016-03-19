@@ -197,6 +197,49 @@ namespace TestExamen1
 
         }
 
+        [TestMethod]
+        public void testMultiplicarPorEscalar() {
+
+            int constant = 1;
+            resultadoEsperado = "234567831";
+
+            cliente = new Service1Client();
+
+            resultadoReal = Convert.ToString(cliente.MultiplicarPorEscalar(constant));
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal,
+                string.Format(mensajeAlerta, resultadoEsperado.ToString(), resultadoReal.ToString()));
+
+        }
+
+        [TestMethod]
+        public void testEsEscalar() {
+
+            resultadoEsperado = "No es escalar";
+
+            cliente = new Service1Client();
+
+            resultadoReal = Convert.ToString(cliente.EsEscalar());
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal,
+                string.Format(mensajeAlerta, resultadoEsperado.ToString(), resultadoReal.ToString()));
+
+        }
+
+        [TestMethod]
+        public void testEsIdentidad() {
+
+            resultadoEsperado = "No es Identidad";
+
+            cliente = new Service1Client();
+
+            resultadoReal = Convert.ToString(cliente.EsIdentidad());
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal,
+                string.Format(mensajeAlerta, resultadoEsperado.ToString(), resultadoReal.ToString()));
+
+        }
+
     }
 }
 

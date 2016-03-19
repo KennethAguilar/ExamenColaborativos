@@ -55,6 +55,15 @@ namespace Examen1
 
         [OperationContract]
         string esTriangularSuperior();
+
+        [OperationContract]
+        string MultiplicarPorEscalar(int constante);
+
+        [OperationContract]
+        string EsEscalar();
+
+        [OperationContract]
+        string EsIdentidad();
     }
 
 
