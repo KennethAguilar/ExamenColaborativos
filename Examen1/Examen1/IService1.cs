@@ -20,6 +20,14 @@ namespace Examen1
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
+        [OperationContract]
+        string sumaResta(int columna1, int fila1, int columna2, int fila2);
+
+        [OperationContract]
+        string esCuadrada(int columna, int fila);
+
+        [OperationContract]
+        string obtenerDiagonal();
     }
 
 

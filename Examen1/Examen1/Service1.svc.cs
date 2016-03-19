@@ -12,6 +12,48 @@ namespace Examen1
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+
+        public string sumaResta(int columna1, int fila1, int columna2, int fila2)
+        {
+
+            string resultado;
+            if ((columna1 == columna2) && (fila1 == fila2))
+                resultado = "Tienen el mismo tamano";
+            else
+                resultado = "Son diferentes";
+
+            return (resultado);
+        }
+
+        public string esCuadrada(int columna, int fila)
+        {
+
+            string resultado;
+            if (columna == fila)
+                resultado = "Es cuadrada";
+            else
+                resultado = "No es cuadrada";
+
+            return resultado;
+        }
+
+        public string obtenerDiagonal()
+        {
+
+            string resultado = "";
+
+            int[][] matriz = new int[][] {
+                new int[] { 2, 3, 4},
+                new int[] { 5, 6, 7},
+                new int[] { 8, 3, 1}
+            };
+
+            for (int i = 0; i < 3; i++)
+                resultado += Convert.ToString(matriz[i][i]);
+
+            return resultado;
+        }
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);
